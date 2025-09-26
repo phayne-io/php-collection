@@ -212,9 +212,9 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
     public function where(?string $propertyOrMethod, mixed $value): CollectionInterface
     {
         return $this->filter(
-        /**
-         * @param T $item
-         */
+            /**
+             * @param T $item
+             */
             function (mixed $item) use ($propertyOrMethod, $value): bool {
                 $accessorValue = $this->extractValue($item, $propertyOrMethod);
 
