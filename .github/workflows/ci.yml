@@ -41,7 +41,7 @@ jobs:
           ACTION_PHP_VERSION: 8.4
 
       - name: Run code styling with phpcs
-        run: ./vendor/bin/phpcs
+        run: ./vendor/bin/php-cs-fixer check
 
       - name: Run header check with docheader
         run: ./vendor/bin/docheader check src/ test/

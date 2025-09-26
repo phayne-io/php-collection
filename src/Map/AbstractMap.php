@@ -16,6 +16,7 @@ use Exception;
 use InvalidArgumentException;
 use Override;
 use Phayne\Collection\AbstractArray;
+use StringBackedEnum;
 use Traversable;
 
 use function array_key_exists;
@@ -70,6 +71,10 @@ abstract class AbstractMap extends AbstractArray implements MapInterface
                 'Map elements are key/value pairs; a key must be provided for '
                 . 'value ' . var_export($value, true),
             );
+        }
+
+        if ($offset instanceof StringBackedEnum) {
+            $offset = $offset->name;
         }
 
         $this->data[$offset] = $value;

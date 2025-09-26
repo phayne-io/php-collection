@@ -83,7 +83,7 @@ interface CollectionInterface extends ArrayInterface
      * @param string $propertyOrMethod The name of the property, method, or
      *     array key to evaluate and return.
      *
-     * @return array<int, mixed>
+     * @return list<mixed> An array of values from the given property, method,
      *
      * @throws Exception\InvalidPropertyOrMethod if the $propertyOrMethod does not exist
      *     on the elements in this collection.
