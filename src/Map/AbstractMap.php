@@ -16,7 +16,7 @@ use Exception;
 use InvalidArgumentException;
 use Override;
 use Phayne\Collection\AbstractArray;
-use StringBackedEnum;
+use BackedEnum;
 use Traversable;
 
 use function array_key_exists;
@@ -73,7 +73,7 @@ abstract class AbstractMap extends AbstractArray implements MapInterface
             );
         }
 
-        if (is_a($offset, StringBackedEnum::class, true) {
+        if ($offset instanceof BackedEnum) {
             $offset = $offset->name;
         }
 
